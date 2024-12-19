@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static\css\index.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+.btn {
+    background-color: #f72585;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    width: 90px;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    border-radius: 5px; 
+    text-decoration: none;
+}
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #480ca8;
+}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small" >
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official" style="color: white;"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram" style="color: white;"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat" style="color: white;"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr" style="color: white;"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter" style="color: white;"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin" style="color: white;"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search" style="color: white;"></i></a>
+</div>
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge" style="color: #f72585;"><b>MARYNE BLOGLIFE</b></h1>
+    <h6 style="color: #f72585;">Bem-vindo ao blog da <span class="w3-tag" style="background-color: #f72585;">Maryne's world</span></h6>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="static\img\FuRVhf0XoAEbTjD.jpg" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white" style="color: white;">Maryne's</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small" style="color: white;"><b>FASHION BLOG</b></h1>
+      
+      <div class="buttons" >
+        <a href="{{ url_for('logout') }}"><input type="submit" value="logout" class="btn"></a>
+      </div>
+    </div>
+  </header>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px" >
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom" ><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>
